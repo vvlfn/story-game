@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://0m1tdc5j78xi"]
+[gd_scene load_steps=2 format=3 uid="uid://0m1tdc5j78xi"]
+
+[ext_resource type="PackedScene" uid="uid://dw6up2c0jr73a" path="res://scenes/player/player.tscn" id="1_ef0wl"]
 
 [node name="Test" type="Node3D"]
 
@@ -10,3 +12,14 @@ size = Vector3(4.786133, 1, 5.4123535)
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2930665, 1, 0)
 size = Vector3(0.2, 1, 5.4123535)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2, 0)
+
+[node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("1_ef0wl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42083877, 0.56265426, 0.45408905)
+_camera = NodePath("../Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.96394694, 0.26609454, 0, -0.26609454, 0.96394694, 0, 2, 4)
+fov = 40.0
