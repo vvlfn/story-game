@@ -7,7 +7,7 @@
 render_priority = 0
 shader = ExtResource("2_ejl0r")
 shader_parameter/enable_pixelation = true
-shader_parameter/enable_fog = false
+shader_parameter/enable_fog = true
 shader_parameter/enable_quantization = true
 shader_parameter/pixel_size = 4.0
 shader_parameter/fog_color = Color(0.8666667, 0, 0, 1)
@@ -35,7 +35,7 @@ size = Vector3(0.2, 1, 5.4123535)
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2, 0)
 
 [node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("1_ef0wl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42083877, 0.56265426, 0.45408905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4196791, 0.7833129, 0.45612633)
 _camera = NodePath("../Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="."]
