@@ -49,4 +49,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15411568)
 mesh = SubResource("QuadMesh_0egrc")
 
 [node name="table" parent="." instance=ExtResource("3_cicdk")]
+<<<<<<< HEAD
 transform = Transform3D(0.4243078, 0, -0.4250342, 0, 0.6005757, 0, 0.4250342, 0, 0.4243078, -1.3432999, 0.49999976, -1.6138629)
+=======
+transform = Transform3D(0.4324471, 0, -0.5431739, 0, 0.694297, 0, 0.5431739, 0, 0.4324471, -1.124033, 0.49999964, -1.7294527)
+>>>>>>> master
