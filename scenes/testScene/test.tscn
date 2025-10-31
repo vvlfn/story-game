@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://0m1tdc5j78xi"]
+[gd_scene load_steps=6 format=3 uid="uid://0m1tdc5j78xi"]
 
 [ext_resource type="PackedScene" uid="uid://dw6up2c0jr73a" path="res://scenes/player/player.tscn" id="1_ef0wl"]
 [ext_resource type="Shader" uid="uid://b7s687r828olo" path="res://shaders/pixelate.gdshader" id="2_ejl0r"]
+[ext_resource type="PackedScene" uid="uid://dtdln4hdgimc2" path="res://assets/objects/table/table.tscn" id="3_cicdk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ejl0r"]
 render_priority = 0
@@ -46,3 +47,6 @@ fov = 55.0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15411568)
 mesh = SubResource("QuadMesh_0egrc")
+
+[node name="table" parent="." instance=ExtResource("3_cicdk")]
+transform = Transform3D(0.4324471, 0, -0.5431739, 0, 0.694297, 0, 0.5431739, 0, 0.4324471, -1.124033, 0.49999964, -1.7294527)
