@@ -3,10 +3,13 @@ extends CharacterBody3D
 @onready var animation = $AnimationPlayer
 @export var _camera: Camera3D
 
+@onready var _Skeleton3D: Skeleton3D = $Armature/Skeleton3D
+
 var JUMP_STRENGTH: float = 5.0
 var SPEED: float = 5.0
 func _ready() -> void:
-	pass
+	#setPlayerColor(Color(0.734, 0.024, 0.65, 1.0))
+	setPlayerColor(Color(0.5,0.5,0.5))
 	
 func _process(delta: float) -> void:
 	if not is_on_floor():
@@ -28,7 +31,6 @@ func _process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		print("test")
 		velocity.y = JUMP_STRENGTH
 	
 	
@@ -37,5 +39,8 @@ func _process(delta: float) -> void:
 	else:
 		animation.stop()
 		
-	print(is_on_floor())
 	move_and_slide()
+
+
+func setPlayerColor(color: Color) -> void:
+	_Skeleton3D.get_child(0).mesh.surface_get_material(0).set("shader_parameter/baseColor", color)
