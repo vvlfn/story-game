@@ -4,7 +4,8 @@ extends Node3D
 var SENSITIVITY: Vector2 = Vector2(300, 300)
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pass
+	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _process(delta: float) -> void:
 	var turnInput: Vector2 = Input.get_vector("look_left","look_right", "look_up","look_down")

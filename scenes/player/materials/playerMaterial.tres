@@ -6,3 +6,4 @@
 render_priority = 0
 shader = ExtResource("1_e642l")
 shader_parameter/baseColor = Color(1, 1, 1, 1)
+shader_parameter/t = 0.0

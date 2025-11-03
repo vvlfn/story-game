@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvrhjvhhyoq3a"]
+[gd_scene load_steps=8 format=3 uid="uid://dvrhjvhhyoq3a"]
 
 [ext_resource type="PackedScene" uid="uid://dw6up2c0jr73a" path="res://scenes/player/player.tscn" id="1_ov3cr"]
 [ext_resource type="Script" uid="uid://c8v763a4p2t1l" path="res://scenes/gameLevel/csgSetMaterial.gd" id="2_asroy"]
 [ext_resource type="PackedScene" uid="uid://dtdln4hdgimc2" path="res://assets/objects/table/table.tscn" id="2_rrqbs"]
 [ext_resource type="Material" uid="uid://cv03x6wus1tnv" path="res://scenes/gameLevel/csg.tres" id="3_cbqxt"]
 [ext_resource type="Shader" uid="uid://b7s687r828olo" path="res://shaders/pixelate.gdshader" id="3_x0kss"]
-[ext_resource type="PackedScene" uid="uid://bgmkp1lq1aynv" path="res://scenes/npc/npc.tscn" id="6_j1war"]
-[ext_resource type="PackedScene" uid="uid://dn0yw06j3qfmn" path="res://scenes/ui/ui.tscn" id="7_np8if"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_asroy"]
 render_priority = 0
@@ -26,7 +24,7 @@ material = SubResource("ShaderMaterial_asroy")
 [node name="BaseLevel" type="Node3D"]
 
 [node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("1_ov3cr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71697664, 0.49720383, 3.8741527)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71697664, 0.6442263, 3.8741527)
 _camera = NodePath("../Camera3D")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
@@ -50,8 +48,3 @@ mesh = SubResource("QuadMesh_cbqxt")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 5.069426, 0)
-
-[node name="Node3D" parent="." instance=ExtResource("6_j1war")]
-transform = Transform3D(0.32029507, 0, 0, 0, 0.32029507, 0, 0, 0, 0.32029507, -3.2379634, 0.5, -0.27930713)
-
-[node name="UI" parent="." instance=ExtResource("7_np8if")]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn0yw06j3qfmn"]
+
+[ext_resource type="Theme" uid="uid://dufg3wbxat5rj" path="res://scenes/ui/ui_theme.tres" id="1_u7n8c"]
+[ext_resource type="Script" uid="uid://ckxljep5cxojp" path="res://scenes/ui/ui.gd" id="2_f5cxw"]
+
+[sub_resource type="Theme" id="Theme_j1war"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_u7n8c")
+script = ExtResource("2_f5cxw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_j1war")
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="interact" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press 'F' to interact"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Test"
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false

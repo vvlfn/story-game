@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://dw6up2c0jr73a"]
+[gd_scene load_steps=16 format=4 uid="uid://dw6up2c0jr73a"]
 
 [ext_resource type="Script" uid="uid://cpxf3wckqqrrr" path="res://scenes/player/movement_controller.gd" id="1_dovo2"]
+[ext_resource type="Script" uid="uid://do3kiufqags6w" path="res://scripts/changeShaderT.gd" id="2_lvxji"]
 [ext_resource type="Script" uid="uid://beib4xu0vos6g" path="res://scenes/player/camera_controller.gd" id="3_gmlin"]
 [ext_resource type="Material" uid="uid://bqvq4ix5e7k6r" path="res://scenes/player/materials/playerMaterial.tres" id="3_lvxji"]
 
@@ -184,6 +185,9 @@ _data = {
 &"walk": SubResource("Animation_bhqom")
 }
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lvxji"]
+height = 1.5
+
 [node name="Player" type="CharacterBody3D"]
 floor_constant_speed = true
 script = ExtResource("1_dovo2")
@@ -195,6 +199,7 @@ shape = SubResource("CapsuleShape3D_dovo2")
 
 [node name="Armature" type="Node3D" parent="."]
 transform = Transform3D(-0.29999998, -2.6226832e-08, -1.1464111e-15, 0, -1.3113415e-08, 0.29999998, -2.6226832e-08, 0.29999998, 1.3113415e-08, 0, 0.39919043, 0)
+script = ExtResource("2_lvxji")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="Armature"]
 bones/0/name = "Torso_2"
@@ -282,3 +287,9 @@ script = ExtResource("3_gmlin")
 
 [node name="CameraPos" type="Node3D" parent="CameraCenter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.708)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" groups=["ui"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CylinderShape3D_lvxji")

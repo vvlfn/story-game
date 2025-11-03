@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b3nrmc71vrcei"]
+
+[ext_resource type="Shader" uid="uid://r33mljf7wae8" path="res://scenes/npc/materials/screen.gdshader" id="1_3k001"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3k001")
+shader_parameter/baseColor = Color(1, 0.43884796, 0.6372336, 1)
+shader_parameter/t = 0.0

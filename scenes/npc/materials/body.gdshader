@@ -1,5 +1,4 @@
 shader_type spatial;
-//render_mode unshaded;
 
 uniform vec3 baseColor: source_color;
 uniform float t = 0.0;

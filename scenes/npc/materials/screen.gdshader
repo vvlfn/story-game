@@ -12,4 +12,5 @@ void fragment() {
 	float c = rand(FRAGCOORD.xy);
 	//ALBEDO = mix(vec3(c,c,c), baseColor, 0.5);
 	ALBEDO = baseColor * c;
+	EMISSION = baseColor * c * 10.0;
 }

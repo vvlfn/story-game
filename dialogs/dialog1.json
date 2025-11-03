@@ -1,0 +1,13 @@
+{
+	"dialog": [
+		{"sender": "1",
+		"content": "test"
+		},
+		{"sender": "2",
+		"content": "test2"
+		},
+		{"sender": "1",
+		"content": "test3"
+		},
+	]
+}
